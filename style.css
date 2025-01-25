@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #1e1e1e;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #141414;
+    height: 20%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.logo img{
+    width: 4rem;
+    justify-content: start;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    
+}
+nav ul li {
+    margin: 0 10px;
+    justify-content: center;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s; 
+}
+
+nav ul li a:hover {
+    color: #1db954;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero-section p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.hero-section button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #1db954;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-section button:hover {
+    background-color: #14833b;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #141414;
+    font-size: 14px;
+}

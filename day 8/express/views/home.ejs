@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        /* Resetting some default styles */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Setting font and background */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #ffaa00;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Main content area */
+        main {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Button styling */
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Our Home Page!</h1>
+        <marquee><h1><%=username%></h1></marquee>
+    </header>
+
+    <main>
+        <p>This is a simple homepage created with HTML and CSS.</p>
+        <p>Click the button below to learn more!</p>
+        <a href="#" class="cta-button">Learn More</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

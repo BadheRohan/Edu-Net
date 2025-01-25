@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: aliceblue;
+        }
+        .container{
+            text-align: center;
+            background: wheat;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0,0);
+            width: 300px;
+        }
+        h1{
+            color: black;
+        }
+        input{
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            bottom: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .buttons{
+            margin: 20px 0;
+        }
+        button{
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover{
+            background-color: #0056b3;
+        }
+        #result{
+            font-size: 18px;
+            color:#555;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function calculate(operation)
+        {
+            const num1 = parseFloat(document.getElementById("input1").value);
+            const num2 = parseFloat(document.getElementById("input2").value);
+            const num3 = parseFloat(document.getElementById("input3").value); // For Rate or Time (for SI)
+            const num4 = parseFloat(document.getElementById("input4").value); // For Time (for SI)
+            let resultElement = document.getElementById("result");
+
+            if(isNaN(num1) || isNaN(num2)) {
+                resultElement.textContent = "Please enter valid numbers";
+                return;
+            }
+            
+            let result;
+
+            switch(operation)
+            {
+                case 'add':
+                    result = num1 + num2;
+                    break;
+                case 'sub':
+                    result = num1 - num2;
+                    break;
+                case 'mul':
+                    result = num1 * num2;
+                    break;
+                case 'div':
+                    if(num2 === 0) {
+                        resultElement.textContent = "Division by 0 is not allowed";
+                        return;
+                    }
+                    result = num1 / num2;
+                    break;
+                case 'si': // Simple Interest calculation
+                    if(isNaN(num3) || isNaN(num4)) {
+                        resultElement.textContent = "Please enter valid values for Rate and Time";
+                        return;
+                    }
+                    result = (num1 * num3 * num4) / 100;
+                    break;
+                default:
+                    result = "Invalid operation";
+            }
+
+            resultElement.textContent = (`Result: ${result}`);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Calculator</h1>
+        <input type="number" id="input1" placeholder="Enter First Number"><br>
+        <input type="number" id="input2" placeholder="Enter Second Number"><br>
+        <input type="number" id="input3" placeholder="Enter Rate of Interest"><br>
+        <input type="number" id="input4" placeholder="Enter Time (in years)"><br>
+        
+        <div class="buttons">
+            <button onclick="calculate('add')">Add</button>
+            <button onclick="calculate('sub')">Subtract</button>
+            <button onclick="calculate('mul')">Multiply</button>
+            <button onclick="calculate('div')">Divide</button>
+            <button onclick="calculate('si')">Calculate Simple Interest</button>
+        </div>
+
+        <p id="result">Result will be displayed here</p>
+    </div>
+</body>
+</html>

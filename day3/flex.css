@@ -1,0 +1,38 @@
+.container{
+    display:flex;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+    /* justify-content: flex-start; */
+    /* justify-content: center; */
+    justify-content: space-between;
+    /* justify-content: space-evenly; */
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+
+}
+.box{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    font-size: 5em;
+    text-align: center;
+    border-radius: 15px;
+    text-shadow: 2px 3px 4px;
+    margin: 5px;
+   
+}
+#box1{
+    background-color: yellow;
+}
+#box2{
+    background-color: rgb(140, 0, 255);
+    background-image: url("./download.jpg");
+    color: white;
+}
+#box3{
+    background-color: rgb(0, 255, 229);
+    
+}
+#box4{
+    background-color: rgb(255, 149, 0);
+}

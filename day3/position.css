@@ -1,0 +1,11 @@
+.relative{
+    height: 100px;
+    width: 100px;
+    border: 4px solid black;
+    background-color: aqua;
+    /* position: relative; */
+     /* position: absolute;position taken from top of the page */
+     position: sticky;
+
+
+}
